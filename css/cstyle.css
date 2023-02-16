@@ -1,0 +1,116 @@
+@import url(null.css);
+
+table{
+   background-color: azure;
+   padding: 25px;
+   font-size: 16px;
+   color: black;
+   text-shadow: none;
+   letter-spacing: normal;
+   word-spacing: normal;
+   max-width: 75%;
+   margin: 0 auto;
+}
+
+tbody{
+   display: flex;
+   flex-direction: column;
+   row-gap: 25px;
+   column-gap: 15px;
+}
+
+tr.title{
+   text-transform: uppercase;
+   text-align: center;
+   justify-content: center;
+   align-self: center;
+   position: relative;
+}
+
+tr.description,
+tr.total,
+tr.prices{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: auto;
+   row-gap: 5px;
+   position: relative;
+}
+
+tr.description th:not(:first-child){
+   padding: 1px 30px;
+}
+
+tr.description th:last-child{
+   text-align: right;
+}
+
+tr.description::before, tr.description::after{
+   content: '';
+   position: absolute;
+   border-top: 1.5px dashed black;
+   width: 100%;
+}
+
+tr.description::before{
+   top: -10px;
+}
+
+tr.description::after{
+   bottom: -10px;
+}
+
+.description th:first-child{
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+
+tr.prices th:not(:first-child){
+   padding: 1px 30px;
+}
+
+tr.prices th:last-child,
+tr.prices th:nth-child(4){
+   text-align: right;
+}
+
+tr.prices th:last-child{
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+
+.prices th:first-child{
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+
+.total th:first-child{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   text-transform: uppercase;
+}
+
+.total th:not(:first-child){
+   text-align: right;
+   padding: 1px 30px;
+}
+
+.total th:last-child{
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+
+.total{
+   position: relative;
+}
+
+.total::before{
+   content: '';
+   position: absolute;
+   border-top: 1.5px dashed black;
+   width: 100%;
+   top: -10px;
+}
+
+
+

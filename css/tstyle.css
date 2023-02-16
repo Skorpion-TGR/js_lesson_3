@@ -1,0 +1,78 @@
+@import url(null.css);
+
+body{
+   padding: 15px;
+   background-color: aqua;
+   color: yellow;
+   font-size: 46px;
+   text-align: left;
+   line-height: 1.5;
+   text-shadow:
+   0 0 1px black,
+   0 0 2px black,
+   0 0 3px black,
+   0 0 4px black,
+   0 0 5px black,
+   0 0 6px black;
+   word-spacing: 15px;
+   letter-spacing: 5px;
+}
+
+.wrapper{
+   padding: 25px;
+   border: 3px solid aqua;
+   border-radius: 15px;
+   box-shadow: 0 0 20px 0 black,
+   inset 0 0 0 1px blue,
+   inset 0 0 25px 0 blue;
+   outline: 1px solid blue;
+   display: flex;
+   flex-direction: column;
+   row-gap: 25px;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   row-gap: 15px;
+   text-shadow: none;
+   color: blue;
+   text-align: center;
+   position: relative;
+   word-spacing: normal;
+   letter-spacing: 1px;
+}
+
+.condition::after{
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: 5%;
+   width: 90%;
+   height: 2px;
+   background-color: blue;
+}
+
+.back {
+   font-size: 36px;
+   text-transform: uppercase;
+   transition: all 0.3s ease-in-out;
+   font-weight: 700;
+}
+
+.back:hover{
+   text-shadow: 0 0 1px #000,
+   0 0 2px black,
+   0 0 3px black;
+   color: yellow;
+}
+
+.title {
+   font-size: 24px;
+}
+
+.condition {
+   font-size: 20px;
+}
+
+

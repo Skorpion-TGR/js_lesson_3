@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 9</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 9</h1>
+         <p class="condition">З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір соціальної допомоги
+         (вважаємо, що заробітна плата є меншою).</p>
+      </div>
+
+      <script class="script">
+         // Завдання 9. З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір соціальної допомоги (вважаємо, що заробітна плата є меншою).
+
+         const salary = parseFloat(prompt('Введіть вашу заробітню плату', 0))
+         const livingCost = parseFloat(prompt('Введіть розмір прожиткового мінімуму', 2500.15))
+
+         let socSupp = livingCost - salary
+            socSupp <= 0
+
+         ? document.write(`При заробітній платі в ${salary.toFixed(2)}грн. соціальна допомога не передбачена!`)
+         : document.write(`При заробітній платі в ${salary.toFixed(2)}грн. розмір соціальної допомоги становить ${socSupp.toFixed(2)}грн.`)
+      </script>
+   </div>

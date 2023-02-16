@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 2</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 2</h1>
+         <p class="condition">Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+      </div>
+
+      <script class="script">
+
+         const input = 'Введіть число'
+         let answer = parseInt(prompt(`Вгадайте число від 1 до 5. Ви маєте дві спроби. ${input}`))
+         const minNum = 1
+         const maxNum = 5
+         let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
+
+         if (answer < minNum || answer > maxNum) {
+            document.write(
+               `Введене число не входить в діапазон чисел від 1 до 5.${input} спочатку`
+            )
+         }
+         else if (answer === randomNum) {
+            document.write(
+            `Вітаю! Удача вам посміхнулась! Ви вгадали число з першої спроби.`)
+         }
+         else{
+            answer = parseInt(prompt(`Перша спроба була невдалою але ви ще маєте шанс. ${input} ще раз`))
+            if (answer === randomNum) {
+               document.write(
+                  `Вітаю! Удача все ж вам посміхнулась! І з другої спроби ви вгадали число. Ніколи не полишайте надії!`
+               )
+            }
+            else {
+               document.write(
+                  `Нажаль ви не вгадали число але натиснувши "F5" на клавіатурі ви можете випробувати удачу ще мінімум два рази. Не здавайтесь!`
+               )
+            }
+         }
+      </script>
+   </div>
+
+</body>
+
+</html>

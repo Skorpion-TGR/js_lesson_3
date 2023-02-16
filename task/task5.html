@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 5</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 5</h1>
+         <p class="condition">З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</p>
+      </div>
+
+      <script class="script">
+
+         const userDayNum = parseInt(prompt(''))
+         let dayName = 'Вкажіть номер дня тижня'
+
+         switch (userDayNum) {
+            case 1:
+               dayName = 'Понеділок'
+               dayNum = 'Перший день тижня -'
+               break
+            case 2:
+               dayName = 'Вівторок'
+               dayNum = 'Другий день тижня -'
+               break
+            case 3:
+               dayName = 'Середа'
+               dayNum = 'Третій день тижня -'
+               break
+            case 4:
+               dayName = 'Четвер'
+               dayNum = 'Четвертий день тижня -'
+               break
+            case 5:
+               dayName = "П'ятниця"
+               dayNum = "П'ятий день тижня -"
+               break
+            case 6:
+               dayName = 'Субота'
+               dayNum = 'Шостий день тижня -'
+               break
+            case 7:
+               dayName = 'Неділя'
+               dayNum = 'Сьомий день тижня -'
+               break
+            default:
+               dayName = 'Вкажіть число від 1 до 7'
+               dayNum = 'Сталася помилка.'
+               break
+         }
+
+         document.write(
+            `${dayNum} ${dayName}`
+         )
+      </script>
+   </div>
+
+</body>
+
+</html>

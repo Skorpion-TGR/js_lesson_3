@@ -1,0 +1,43 @@
+@import url(null.css);
+
+[class*=__bg] {
+   margin: 0 auto;
+   width: 90%;
+   height: 75vh;
+   border-radius: 15px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   box-shadow: 0 0 10px 0 black,
+   inset 0 0 20px 0 black;
+   padding: 15px;
+}
+
+p.oututmn__bg{
+   background-image: url(../img/outumn.webp);
+   color: orange;
+}
+
+p.winter__bg{
+   background-image: url(../img/winter.webp);
+   color: aliceblue;
+}
+
+p.spring__bg{
+   background-image: url(../img/spring.jpg);
+   color: greenyellow;
+}
+
+p.summer__bg{
+   background-image: url(../img/summer.webp);
+   background-position: right;
+   background-size: auto;
+   color: green;
+}
+
+.alert{
+   text-align: center;
+   padding: 50px;
+   font-size: 86px;
+}

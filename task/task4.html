@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 4</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 4</h1>
+         <p class="condition">З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.</p>
+      </div>
+
+      <script class="script">
+
+         const userDriveLicenseCat = prompt('Вкажіть категорію водійських прав (А; В; С)'),
+         motorcycleCat = 'A',
+         carCat = 'B',
+         truckCat = 'C',
+         license = 'Дозволено керувати';
+
+         if (userDriveLicenseCat.toUpperCase() === motorcycleCat) {
+            document.write(
+               `${license} мотоциклом.`
+            )
+         }
+         else if (userDriveLicenseCat.toUpperCase() === carCat) {
+            document.write(
+               `${license} легковим автомобілем.`
+            )
+         }
+         else if (userDriveLicenseCat.toUpperCase() === truckCat) {
+            document.write(
+               `${license} вантажним транспортним засобом.`
+            )
+         }
+         else {
+            document.write(
+               `Ви маєте унікальну можливість подорожувати автостопом.`
+            )
+         }
+
+      </script>
+   </div>
+
+</body>
+
+</html>

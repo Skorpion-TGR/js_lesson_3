@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 8</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 8</h1>
+         <p class="condition">Дано ширину екрана та кількість елементів, які повинні бути відображені у рядку. Визначити ширину елементів, які повинні
+         бути відображені у цьому рядку.
+         </p>
+      </div>
+
+      <script class="script">
+         // Дано ширину екрана та кількість елементів, які повинні бути відображені у рядку. Визначити ширину елементів, які повинні бути відображені у цьому рядку.
+
+         const windowWidht = window.innerWidth 
+         let = quantityElementInRow = parseInt(prompt(`Ширина екрану = ${windowWidht} pх. Вкажіть кількість елементів в рядку`, 0))
+
+         let widthElement = windowWidht / quantityElementInRow
+
+         document.write(`При ширині екрану ${windowWidht}px та кількості елементів ${quantityElementInRow} одиниць, ширина кожного елементу в рядку становить ${widthElement.toFixed(1)}px`)
+      </script>
+   </div>
+
+</body>
+
+</html>

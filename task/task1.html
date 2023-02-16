@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 1</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 1</h1>
+         <p class="condition">З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще
+         залишаються гроші, то пропонуємо витратити ще мінімум 4,00 грн.</p>
+      </div>
+      <script class="script">
+         
+         let productPrice = parseFloat(prompt('Вкажіть ціну товару, грн.', '125.00'))
+         let userMoney = parseFloat(prompt('Яку кількість гроше ви маєту? грн.', '129.00'))
+         const lotPrice = '4.00'
+         const gratitude = 'Дякуємо за покупку.'
+
+         if (productPrice > userMoney){
+            document.write(
+               `У вас не достатньо коштів для здійснення покупки`
+            )
+         }
+         else if ((userMoney - productPrice) >= lotPrice) {
+            document.write(
+               `${gratitude} <br> Чи бажаєте здійснити благодійний внесок на потреби ЗСУ для забезпечення гарантованої перемоги України? <br> Мінімальний внесок складає ${lotPrice} грн.`
+            )
+         }
+         else {
+            document.write(
+               `${gratitude}`
+            )
+         }
+      </script>
+   </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 0</title>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 0</h1>
+         <p class="condition">З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.</p>
+      </div>
+      
+      <script class="script"> 
+      
+         const Name1 = prompt("Вкажіть ім'я першої дитини", "Тарас")
+         const Name2 = prompt("Вкажіть ім'я другої дитини", "Марічка")
+
+         const answer = 'має більше цукерок'
+         const question = 'Скільки цукерок в'
+
+         const candiesQuantityName1 = parseInt(prompt(`${question} першої дитини?`), 0)
+         const candiesQuantityName2 = parseInt(prompt(`${question} другої дитини?`), 0)
+
+         if (candiesQuantityName1 > candiesQuantityName2){
+            document.write(`${Name1} ${answer}`)
+         }
+         else if (candiesQuantityName2 > candiesQuantityName1){
+            document.write(`${Name2} ${answer}`)
+         }
+         else {
+            document.write(`${Name1} та ${Name2} мають однакову кількість цукерок`)
+         }
+      </script>
+   </div>
+   
+</body>
+</html>

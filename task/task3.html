@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 3</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 3</h1>
+         <p class="condition">З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником,
+         пенсіонером).</p>
+      </div>
+
+      <script class="script">
+         const userAge = parseInt(prompt('Вкажіть вік людинию', 36)),
+         kindergartenAge = 3,
+         schoolAge = 6,
+         studentAge = 18,
+         employeeAge = 23,
+         pensionerAge = 66;
+      
+      if (userAge < kindergartenAge){
+         document.write(
+            `Немовля`
+         )
+      }
+      else if (userAge < schoolAge){
+         document.write(
+            `Дитина у садочку`
+         )
+      }
+      else if (userAge < studentAge){
+         document.write(
+            `Школяр`
+         )
+      }
+      else if (userAge < employeeAge){
+         document.write(
+            `Студент`
+         )
+      }
+      else if (userAge < pensionerAge){
+         document.write(
+            `Працівник`
+         )
+      }
+      else{
+         document.write(
+            `Пенсіонер`
+         )
+      }
+
+      </script>
+   </div>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <link rel="stylesheet" href="../css/ystyle.css">
+   <title>Завдання 6</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 6</h1>
+         <p class="condition">З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</p>
+      </div>
+
+      <script class="script">
+         const userMonthNum = parseInt(prompt('Вкажіть номер місяця'))
+
+         if (userMonthNum <= 0 || userMonthNum > 12){
+            document.write(
+               `
+               <p class="alert">
+               Вкажіть номер місяця <br> від 1 до 12
+               </p>
+               `
+            )
+         }
+         else if (userMonthNum === 12 || userMonthNum <= 2){
+            document.write(
+               `
+               <p class = "winter__bg">
+                  Зима
+               </p>
+               `
+            )
+         }
+         else if (userMonthNum <= 5) {
+            document.write(
+               `
+               <p class = "spring__bg">
+                  Весна
+               </p>
+               `
+            )
+         }
+         else if (userMonthNum <= 8) {
+            document.write(
+               `
+               <p class = "summer__bg">
+                  Літо
+               </p>
+               `
+            )
+         }
+         else if (userMonthNum <= 11) {
+            document.write(
+               `
+               <p class = "oututmn__bg">
+                  Осінь
+               </p>
+               `
+            )
+         }
+         else{
+            document.write(
+               `
+               <p class="alert">
+               Натисніть F5
+               </p>
+               `
+            )
+         }
+      </script>
+   </div>
+
+</body>
+
+</html>
